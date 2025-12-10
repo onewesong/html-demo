@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>图片鼠标悬停抖动 Demo</title>
+
+    <style>
+        /* 页面整体样式，仅用于美观，可删 */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* 图片样式 */
+        .demo-img {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all .2s;
+        }
+
+        /* 鼠标移到图片上触发抖动动画 */
+        .demo-img:hover {
+            animation: shake .5s infinite;
+        }
+
+        /* 抖动动画定义 */
+        @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
+                transform: translate(1px, 2px) rotate(-1deg);
+            }
+
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>图片悬停抖动效果 Demo</h1>
+
+    <p>把鼠标移到下方图片上体验抖动效果：</p>
+
+    <img class="demo-img" src="https://picsum.photos/300/200" alt="demo image">
+
+</body>
+
+</html>
